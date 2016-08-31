@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head><title>JavaScript_asignment</title>
+<style>
+#text{
+background-color:yellow;
+text-align:center;
+font-size:40px;
+height:150px;
+border:solid 1px red;
+border-radius: 50px;
+
+}
+
+</style>
+<script>
+var profession = prompt("what is your profession "," ");
+var hobby= prompt("what is your hobby", " ");
+
+function check(profession, hobby){
+var response1 = "that profession is one of the most popular and highly paid";
+var response2 = "don't you wish you had a better job";
+var response3 = "I wish I could have your salary!  :)";
+var response4 = "really! you all deserve a lot more pay for your hard work ";
+var response5 = "do you ever get tired of the long hours. You deserve more money!";
+var response6 = "interesting , tell me more!";
+var response7 = "that takes lots of money and time";
+var response8="It has been a while that I've known someone with that profession";
+var  professionlist= ["teacher","IT","doctor","cashier","clerk","nurse","waitress","janitor","secretary","accountant","printing","customer service representative"];
+var a = professionlist.indexOf(profession);
+var hobbylist=["travel","skiing","fashion","boating","collectibles","golf","fishing", "watches","art","politics","reading","exercise","sports"];
+var b = hobbylist.indexOf(hobby);
+
+//this will check the profession of the person+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+if(a==1 || a==2 || a==9 ){
+		var response = response1+"<br/>"+response3;					
+}else if
+(a ==0 || a==3||a==4||a==6||a==7 ||a==10){
+var response = response2 ;
+}else if
+(a==5){
+var response = response5;
+}else if
+(a==8||a==11){
+var response =  response4;
+}else{
+var response = response8;
+}
+// this will check the hobby of the person*********************************************************************************
+if(b>=0&&b<=5 ){
+var response =response +"<br/>"+hobby+" "+ response7;
+}else if
+(b>=5 && b<=12){
+var response = response +"<br/>"+hobby+" "+ response6;
+}else{
+var response = response +"<br/>"+hobby+" "+ response6;
+}
+
+return "<div id='text'>"+profession +" "+response+"</div>" ;
+
+}
+var result = check(profession, hobby);
+document.write( result);
+
+
+</script>
+
+</head>
+<body>
+
+
+</body>
+
+
+
+</html>
