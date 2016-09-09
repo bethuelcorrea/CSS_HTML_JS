@@ -1,0 +1,18 @@
+<script type="text/javaScript">
+//this is the constructor
+function contact(name, age){
+this.name = name;
+this.age = age;
+this.calculateRetire= calculateRetire;
+}
+// this is the method to calculate retirement.
+function calculateRetire(age){
+var Retire = 76 - this.age;
+return Retire;
+}
+
+//This is the instance of the object.
+var Bet = new contact("Bethuel Correa", 36);
+document.write(Bet.name +" Retiring In "+Bet.calculateRetire()+' Years');
+
+</script>
